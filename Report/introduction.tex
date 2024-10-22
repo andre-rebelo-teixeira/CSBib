@@ -1,0 +1,9 @@
+\addcontentsline{toc}{section}{{Introduction}}
+\section*{Introduction}
+\label{sec:intro}
+
+This section focuses on designing and implementing a control system for a flexible robot arm joint, using a state-space model developed earlier. The goal is to create a system that can accurately position the tip of the flexible bar. The controller is designed using Linear Quadratic (LQ) techniques, which help optimize performance by balancing control precision with energy efficiency.
+
+Since the plant's state can’t be measured directly, a Kalman filter is used to estimate the necessary values. The Loop Transfer Recovery (LTR) technique is then applied to make the system more robust and resistant to disturbances.
+
+The controller is tested on the physical system, and its performance is analyzed to ensure that it meets the design expectations. The results are documented with MATLAB scripts, Simulink diagrams, and a detailed report to demonstrate how the system behaves under different conditions.

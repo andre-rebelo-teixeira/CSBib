@@ -1,0 +1,94 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{hyperref}
+\usepackage{float}
+\usepackage{geometry}
+\usepackage{tabto}
+\geometry{margin=1in}
+\usepackage{csquotes}
+\usepackage{listings}
+\usepackage{xcolor} 
+\usepackage{tcolorbox}
+
+
+\lstset{
+    language=Matlab, % The language of the code
+    basicstyle=\ttfamily\small, % The basic font style used
+    keywordstyle=\color{blue}\bfseries, % Style for keywords
+    commentstyle=\color{green}, % Style for comments
+    stringstyle=\color{red}, % Style for strings
+    numbers=left, % Where to put line numbers
+    numberstyle=\small\color{gray}, % Style for line numbers
+    stepnumber=1, % Line number step size
+    numbersep=10pt, % Space between line numbers and code
+    backgroundcolor=\color{lightgray!10}, % Background color for the code block
+    frame=single, % Frame around the code block
+    breaklines=true, % Automatic line breaking
+    captionpos=b % Caption position (b for bottom, t for top)
+}
+
+\tcbset{
+  observation/.style={
+    colback=yellow!10!white, % Background color
+    colframe=black, % Border color
+    fonttitle=\bfseries, % Title font
+    coltitle=black, % Title color
+    boxrule=0.5mm, % Border thickness
+    title=Observation, % Title text
+    sharp corners, % Sharp corners
+    enhanced, % Allows more features
+    attach boxed title to top left={yshift=-2mm, xshift=2mm},
+    boxed title style={colframe=black, colback=yellow!30!white, boxrule=0.5mm},
+  }
+}
+
+
+\tcbset{
+  mybox/.style={
+    colback=blue!5!white, % Background color
+    colframe=blue!75!black, % Border color
+    fonttitle=\bfseries, % Title font style
+    boxrule=0.5mm, % Border thickness
+    sharp corners, % Sharp corners
+    enhanced, % Enhanced features
+  }
+}
+
+
+\tcbset{
+  historicalbox/.style={
+    colback=yellow!10!white, % Background color
+    colframe=orange!85!black, % Border color
+    fonttitle=\bfseries, % Title font style
+    title=Historical Curiosity, % Title of the box
+    boxrule=1mm, % Border thickness
+    sharp corners, % Sharp corners for the box
+    enhanced, % Allows for more features
+    coltitle=black, % Title color
+    left=2mm, right=2mm, top=2mm, bottom=2mm, % Padding
+    width=\textwidth, % Box width
+    arc=2mm, % Corner rounding
+  }
+}
+
+\begin{document}
+
+\input{cover}
+\input{contents}
+\input{introduction}
+\input{question4/question4_1}
+\input{question4/question4_2}
+\input{question4/question4_3}
+\input{question4/question4_4}
+\input{question4/question4_5}
+\input{question4/question4_6}
+\input{question4/question4_7}
+\input{conclusions}
+
+
+\end{document}
