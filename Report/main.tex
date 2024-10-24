@@ -1,7 +1,6 @@
 \documentclass[a4paper,12pt]{article}
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
-\usepackage{subcaption}
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
@@ -14,6 +13,27 @@
 \usepackage{listings}
 \usepackage{xcolor} 
 \usepackage{tcolorbox}
+\usepackage{subcaption}
+\usepackage{listings}
+\usepackage{xcolor}  % For adding colors to code
+
+% Define MATLAB language settings
+\lstset{
+    language=Matlab,                 % Set language to MATLAB
+    basicstyle=\ttfamily\footnotesize, % Set font size and style
+    keywordstyle=\color{blue},       % Keywords color
+    stringstyle=\color{green},       % Strings color
+    commentstyle=\color{gray},       % Comment color
+    numbers=left,                    % Line numbers on the left
+    numberstyle=\tiny\color{gray},   % Style for line numbers
+    stepnumber=1,                    % Line number step
+    numbersep=5pt,                   % Distance of line numbers from the code
+    backgroundcolor=\color{lightgray!20}, % Background color of the code block
+    frame=single,                    % Frame around the code block
+    breaklines=true,                 % Line breaking for long lines
+    showstringspaces=false,          % Hide underscores in strings
+}
+
 
 
 \lstset{

@@ -3,3 +3,7 @@
 \vspace{10pt}
 
 %%Write your answer here
+
+Pre-filtering can play a vital role in shaping the reference signal before it enters the feedback loop by adjusting the input signal to compensate any new dynamics introduced by the controller or the plant. 
+
+In this project, different kinds of pre-filters were used to achieve a more accurate positioning of the tip of the robot arm joint. One of them was an integrator, which was used to eliminate the steady-state error and push the system toward the desired output. Another example of the usage of pre-filters in our project are the gain adjustments introduced, which convert the signal's amplitude before entering specific parts of the system. By fine-tuning and using these pre-filters in our system, it is possible to reach the desired positions more quickly and accurately without having a big influence of noise/delays, therefore resulting in better overall performance.

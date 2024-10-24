@@ -3,3 +3,5 @@
 \vspace{10pt}
 
 %%Write your answer here
+
+In a LTR framework, the choice of noise covariance matrices plays a crucial role in the performance of the system. The process noise covariance matrix $Q$ defines the uncertainty associated to the state dynamics of the system and the choice of a larger $Q$ suggests that the system is being exposed to more significant disturbances in the model. This means that the Kalman filter will value more the measurements performed by the sensors, potentially leading to faster adjustments in the controller. On the other hand, the measurement noise covariance matrix $R$ gives us the uncertainty in the measurements obtained from the sensors and the choice of a larger $R$ suggests more noise in the measurements. This means that, in this case, the Kalman filter will trust more the predictions produced by the model than the measurements.
