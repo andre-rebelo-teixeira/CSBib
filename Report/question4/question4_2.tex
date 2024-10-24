@@ -4,10 +4,10 @@
 
 %%Write your answer here
 
+All simulink models devloped in this part of the course can be seen in this chapter. The model in Figure \ref{fig:plant_interface} represents the plant interface, facilitating the interaction between the physical system and the control model, specifically, sensor data and actuator signals are processed through this interface. The model present in figure \ref{fig:state_estimator} depicts the state estimator, which is responsible for estimating the system states based on sensor inputs and control signals, utilizing a Kalman filter. Lastly, the state feedback controller, shown in Figure \ref{fig:controller_without_integrator}, is tasked with generating the control signals sent to the actuators. This controller does not incorporate integral action, this means that if the motor or gearbox has any type of non moduled dead zones the system will have a steady state error.
 
-The Simulink models employed for controlling the system are presented in Figure \ref{fig:simulink_models_no_integrator}. This figure illustrates three Simulink diagrams. The diagram in Figure \ref{fig:plant_interface} represents the plant interface, facilitating the interaction between the physical system and the control model. Specifically, sensor data and actuator signals are processed through this interface. Figure \ref{fig:state_estimator} depicts the state estimator, which is responsible for estimating the system states based on sensor inputs and control signals, utilizing a Kalman filter. Lastly, the state feedback controller, shown in Figure \ref{fig:controller_without_integrator}, is tasked with generating the control signals sent to the actuators. This controller does not incorporate integral action, which implies that a steady-state error is expected in the closed-loop system.
+To fix this possible problem a new optimal controller with integral action was designed, as we can see in figure \ref{fig:controler_with_integrator}, this new control simply integrates the error of the system as sum to the control signal.
 
-To address the steady-state error, a discrete-time integrator can be incorporated into the control system. This integrator processes the difference between the reference signal and the system output. The corresponding Simulink model is depicted in Figure \ref{fig:controler_with_integrator}. To mitigate the issue of integral windup, the integrator block is constrained with maximum and minimum limits, ensuring that the signal magnitude does not saturate the actuators even after the error has been corrected.
 \begin{figure}[H]
     \centering
     \begin{subfigure}{0.47\textwidth}
@@ -29,7 +29,6 @@ To address the steady-state error, a discrete-time integrator can be incorporate
     \caption{Simulink models utilized for system control without integral action}
     \label{fig:simulink_models_no_integrator}
 \end{figure}
-
 
 
 \begin{figure}[H]
